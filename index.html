@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lomiyarn & Silog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <ul>
+        <img src="logo.png" alt="Lomiyarn & Silog Logo" class="logo">
+        <li><a href="#home">Home</a></li>
+        <li class="dropdown">
+            <a href="#menu" class="dropbtn">Menu</a>
+            <div class="dropdown-content">
+                <a href="#silog">Silog</a>
+                <a href="#rice">Rice Meal</a>
+                <a href="#soup">Soup</a>
+            </div>
+        </li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <div class="search-container">
+            <input type="text" id="searchBox" class="search-box" placeholder="Search for products, services..." />
+            <button onclick="searchFunction()" class="search-btn">Search</button>
+        </div>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <h2>Welcome to Lomiyarn & Silog!</h2>
+    <p>Delicious meals made just for you. Quick, hot, and fresh!</p>
+    <a href="cart.html">
+        <button onclick="window.location.href='cart.html';">Go to Cart</button>
+    </a>    
+    <div class="video-class">
+        <a class="video-link" target="_blank" href="https://example.com">
+            <video style="border-radius: 5px; padding-top: 30px;" class="styled-video" width="600" height="300px" autoplay muted loop>
+                <source src="image/video.mp4" type="video/mp4">
+
+            </video>
+        </a>
+    </div>
+</section>
+
+
+
+
+<!-- Menu Section -->
+<h2 class="menu-title" id="menu">Our Menu</h2>
+
+<div class="menu-container">
+<!-- Silog Section -->
+<h3 class="menu-silog" style="text-align: center; padding-top: 30px;" id="silog">SILOG</h3>
+<div class="menu-container">
+    <section class="menu">
+        <div class="menu-item" style="background-image: url('2bg.png');">
+            <h3>Tapsilog</h3>
+            <p class="price">70</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Tapsilog', 70)">Add to Cart</button>
+        </div>
+        <div class="menu-item" style="background-image: url('image/5.jfif');">
+            <h3>Hamsilog</h3>
+            <p class="price">35</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Hamsilog', 35)">Add to Cart</button>
+        </div>
+        <div class="menu-item" style="background-image: url('image/1.jfif');">
+            <h3>Bangsilog</h3>
+            <p class="price">90</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Bangsilog', 90)">Add to Cart</button>
+        </div>
+        <div class="menu-item" style="background-image: url('image/2.jfif');">
+            <h3>Hotsilog</h3>
+            <p class="price">45</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Hotsilog', 45)">Add to Cart</button>
+        </div>
+        <div class="menu-item" style="background-image: url('image/chixilog.jpg');">
+            <h3>Chixilog</h3>
+            <p class="price">75</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Chixilog', 75)">Add to Cart</button>
+        </div>
+        <div class="menu-item" style="background-image: url('image/4.jfif');">
+            <h3>Tosilog</h3>
+            <p class="price">60</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Tosilog', 60)">Add to Cart</button>
+        </div>
+        <div class="menu-item" style="background-image: url('image/Embosilog.jpg');">
+            <h3>Embosilog</h3>
+            <p class="price">35</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Embosilog', 35)">Add to Cart</button>
+        </div>
+        <div class="menu-item" style="background-image: url('image/salamisilog.jpg');">
+            <h3>Salamisilog</h3>
+            <p class="price">35</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Salamisilog', 35)">Add to Cart</button>
+        </div>
+        <div class="menu-item" style="background-image: url('image/hunggariansiog.jpg');">
+            <h3>Hunggariansilog</h3>
+            <p class="price">70</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Hunggariansilog', 70)">Add to Cart</button>
+        </div>
+        <div class="menu-item" style="background-image: url('image/corned\ silog.jpg');">
+            <h3>Cornsilog</h3>
+            <p class="price">60</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Cornsilog', 60)">Add to Cart</button>
+        </div>
+        <div class="menu-item" style="background-image: url('image/porksilog.jpg');">
+            <h3>Porksilog</h3>
+            <p class="price">80</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Porksilog', 80)">Add to Cart</button>
+        </div>
+        <div class="menu-item" style="background-image: url('image/silog.jpg');">
+            <h3>Silog</h3>
+            <p class="price">22</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Silog', 22)">Add to Cart</button>
+        </div>
+    </section>
+</div>
+</div>
+<!-- Rice Meal Section -->
+<h3 class="menu-rice" style="text-align: center; padding-top: 30px;" id="rice">RICE MEAL</h3>
+<div class="menu-container">
+    <section class="menu">
+        <div class="menu-item" style="background-image: url('image/Chicken\ Ala\ King.jpg');">
+            <h3>Chicken Ala King</h3>
+            <p class="price">85</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Chicken Ala King', 85)">Add to Cart</button>
+        </div>
+        <div class="menu-item" style="background-image: url('image/Shanghai\ Rice.jpg');">
+            <h3>Shanghai w/ Rice</h3>
+            <p class="price">55</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Shanghai w/ Rice', 55)">Add to Cart</button>
+        </div>
+        <div class="menu-item" style="background-image: url('image/sisigsilog.jpg');">
+            <h3>Sisig w/ Rice</h3>
+            <p class="price">65</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Sisig w/ Rice', 65)">Add to Cart</button>
+        </div>
+        <div class="menu-item" style="background-image: url('image/Seafood\ Rice.jpg');">
+            <h3>Seafood Rice</h3>
+            <p class="price">60</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Seafood Rice', 60)">Add to Cart</button>
+        </div>
+        <div class="menu-item" style="background-image: url('image/Letchon\ Kawali.jpg');">
+            <h3>Letchon Kawali</h3>
+            <p class="price">75</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Letchon Kawali', 75)">Add to Cart</button>
+        </div>
+        <div class="menu-item" style="background-image: url('image/Chicken\ Teriyaki.jpg');">
+            <h3>Chicken Teriyaki</h3>
+            <p class="price">65</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Chicken Teriyaki', 65)">Add to Cart</button>
+        </div>
+        <div class="menu-item" style="background-image: url('image/Chicken\ Tonkatsu.jpg');">
+            <h3>Chicken Tonkatsu</h3>
+            <p class="price">70</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Chicken Tonkatsu', 70)">Add to Cart</button>
+        </div>
+    </section>
+</div>
+
+<!-- Soup Section -->
+<h3 class="menu-soup" style="text-align: center; padding-top: 30px;" id="soup">SOUP</h3>
+<div class="menu-container">
+    <section class="menu">
+        <div class="menu-item" style="background-image: url('image/Pares\ Overload.jpg');">
+            <h3>Pares Overload</h3>
+            <p class="price">60</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Pares Overload', 60)">Add to Cart</button>
+        </div>
+        <div class="menu-item" style="background-image: url('image/Lomi.jpg');">
+            <h3>Lomi Batanggas</h3>
+            <p class="price">35</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Lomi Batanggas', 35)">Add to Cart</button>
+        </div>
+        <div class="menu-item" style="background-image: url('image/Lugaw.jpg');">
+            <h3>Aruskaldo</h3>
+            <p>Fried to perfection, served with dipping sauce.</p>
+            <p class="price">30</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Aruskaldo', 30)">Add to Cart</button>
+        </div>
+    </section>
+</div>
+
+
+
+<div class="container">
+    <div class="section">
+        <h2 class="title">Mission</h2>
+        <p class="mission">Our mission is to provide exceptional service...</p>
+    </div>
+    <div class="section">
+        <h2 class="title">Vision</h2>
+        <p class="vision">Our vision is to become a global leader...</p>
+    </div>
+    <div class="poster">
+        <img src="image/poster (1).jpg" alt="Poster Image">
+    </div>
+</div>
+
+
+
+
+<!-- About Section -->
+<section class="about" id="about">
+    <h2>About Us</h2>
+    <p>At Lomiyarn & Silog, we serve the finest fast food made with love. We pride ourselves on using high-quality ingredients, and our meals are prepared fresh to satisfy your cravings. Whether you're in the mood for a quick bite or a full meal, we've got you covered!</p>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; Lomiyarn & Silogan. All rights reserved.</p>
+</footer>
+
+<script>
+    // Add to Cart Function
+    function addToCart(itemName, itemPrice) {
+        // Get the cart from localStorage, or initialize an empty array if it doesn't exist
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        // Find if the item is already in the cart
+        let item = cart.find(item => item.name === itemName);
+
+        // If the item is already in the cart, increase the quantity
+        if (item) {
+            item.quantity += 1;
+        } else {
+            // Otherwise, add the item to the cart with quantity 1
+            cart.push({ name: itemName, price: itemPrice, quantity: 1 });
+        }
+
+        // Save the updated cart back to localStorage
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Optionally, show a confirmation message
+        alert(`${itemName} has been added to your cart!`);
+    }
+</script>
+
+</body>
+</html>

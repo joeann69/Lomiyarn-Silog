@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <style>
+        /* Basic styling for cart */
+        .cart-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .cart-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 300px;
+            padding: 15px;
+            margin: 10px;
+            text-align: center;
+        }
+        .checkout-btn, .back-btn {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .back-btn {
+            background-color: #6c757d; /* Different color for back button */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Back to Shop Button -->
+<button class="back-btn" onclick="goBack()">⬅️ Back to Shop</button>
+
+<h2>Your Cart</h2>
+<div class="cart-container" id="cartContainer">
+    <!-- Cart items will be displayed here -->
+</div>
+<button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+
+<script>
+    // Function to display cart items
+    function displayCart() {
+        const cartContainer = document.getElementById("cartContainer");
+        cartContainer.innerHTML = "";
+
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        if (cart.length === 0) {
+            cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+            return;
+        }
+
+        cart.forEach(item => {
+            const cartDiv = document.createElement("div");
+            cartDiv.className = "cart-item";
+            cartDiv.innerHTML = `
+                <h4>${item.name}</h4>
+                <p>Price: $${item.price.toFixed(2)}</p>
+                <p>Quantity: ${item.quantity}</p>
+                <p>Total: $${(item.price * item.quantity).toFixed(2)}</p>
+            `;
+            cartContainer.appendChild(cartDiv);
+        });
+    }
+
+    // Function to handle checkout
+    function checkout() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        if (cart.length === 0) {
+            alert("Your cart is empty.");
+            return;
+        }
+
+        let totalAmount = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+        alert(`Thank you for your order! Total amount: $${totalAmount.toFixed(2)}`);
+
+        // Clear the cart after checkout
+        localStorage.removeItem("cart");
+        displayCart();
+    }
+
+    // Go back to the index page
+    function goBack() {
+        window.location.href = "index.html";
+    }
+
+    displayCart();
+</script>
+
+</body>
+</html>
